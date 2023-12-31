@@ -5,3 +5,4 @@ Steps to make a virtual environment:
 1. Create a folder
 2. cd in CLI to that folder
 3. enter "python3 -m venv <nameofenvironment>"
+4. activate it using: "source <nameofenvironment>/bin/activate"
