@@ -1,9 +1,15 @@
 After setting up the virtual environment
 
 
+Create a project and give it a name:
+
+django-admin startproject <nameofproject>
+
+
+
 Create the app and give it a name:
 
-django-admin startproject <appname>
+django-admin startapp <appname>
 
 NOTE: This also creates a file called manage.py that works like the django-admin command
 
