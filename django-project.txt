@@ -5,4 +5,11 @@ Create the project and give it a name:
 
 django-admin startproject <projectname>
 
+NOTE: This also creates a file called manage.py that works like the django-admin command
 
+
+
+
+---------------Run the Server------------------
+
+python3 manage.py runserver
