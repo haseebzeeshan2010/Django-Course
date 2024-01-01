@@ -1,0 +1,8 @@
+After setting up the virtual environment
+
+
+Create the project and give it a name:
+
+django-admin startproject <projectname>
+
+
