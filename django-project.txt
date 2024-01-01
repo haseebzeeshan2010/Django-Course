@@ -1,15 +1,21 @@
 After setting up the virtual environment
 
 
-Create the project and give it a name:
+Create the app and give it a name:
 
-django-admin startproject <projectname>
+django-admin startproject <appname>
 
 NOTE: This also creates a file called manage.py that works like the django-admin command
 
 
 
 
----------------Run the Server------------------
+---------------Run the Development Server------------------
 
 python3 manage.py runserver
+
+
+NOTE: the Development server is not recommended to be used in production as it has not gone through security auditing or performance tests
+
+(another) NOTE: The Development server automatically reloads the python code for each request so you don't need to restart the server for each change.
+However some actions like creating files don't trigger the server reset so you need to do it yourself.
