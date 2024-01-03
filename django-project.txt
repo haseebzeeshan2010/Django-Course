@@ -1,10 +1,17 @@
 After setting up the virtual environment
 
+Install django using:
+
+pip install django
+
 
 Create a project and give it a name:
 
 django-admin startproject <nameofproject>
 
+Then enter the project using:
+
+cd <nameofproject>
 
 
 Create the app and give it a name:
