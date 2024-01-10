@@ -1,0 +1,15 @@
+After setting up your project, if for example you try to enter a non-existant path such as:
+
+127.0.0.1.8000/home
+
+you recieve a page which is very detailed as it is made for developers
+
+To set your own page follow the steps below:
+
+1. Turn debug to false
+
+Open the settings.py file in myproject and change DEBUG value to False
+Add '*' inside allowed hosts(with the quotes!) to include all possible hosts.
+
+
+A new page should appear when you refresh the page
