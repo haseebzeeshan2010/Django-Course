@@ -1,0 +1,26 @@
+REFER TO MODELS_EXAMPLE_PROJECT FOR THESE NOTES
+
+after having made the normal project, go to models.py in the app layer(menuapp in this project)
+under the comment, create your models
+
+
+#How to make a model is refferred to in the project itself#
+
+Go to settings.py to create the model(exact instructions are listed inside settings.py itself)
+
+Make sure you are in the project layer of the project(the top menuproject in this case, NOT the lower level one) in the commandline
+
+Write: python manage.py makemigrations
+
+Write: python manage.py migrate
+
+Clear terminal by writing: clear
+
+Write: python3 manage.py shell
+
+Write: from menuapp.models import Menu
+
+Write: Menu.objects.all()  #NOTE: nothing should come up except <QuerySet []> as there is no object created yet
+
+Write: m = Menu.objects.create(name = 'pasta', cuisine = 'italian', price = 10)     #This will directly add an object
+
