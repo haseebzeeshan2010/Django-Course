@@ -1,4 +1,4 @@
-REFER TO MODELS_EXAMPLE_PROJECT FOR THESE NOTES
+REFER TO models_example FOR THESE NOTES
 
 after having made the normal project, go to models.py in the app layer(menuapp in this project)
 under the comment, create your models
@@ -10,7 +10,7 @@ Go to settings.py to create the model(exact instructions are listed inside setti
 
 Make sure you are in the project layer of the project(the top menuproject in this case, NOT the lower level one) in the commandline
 
-Write: python manage.py makemigrations
+Write: python3 manage.py makemigrations
 
 Write: python manage.py migrate
 
@@ -24,3 +24,24 @@ Write: Menu.objects.all()  #NOTE: nothing should come up except <QuerySet []> as
 
 Write: m = Menu.objects.create(name = 'pasta', cuisine = 'italian', price = 10)     #This will directly add an object
 
+Write: Menu.objects.all()  #This is done again to check if object is added
+
+
+
+
+
+---------------To update an entry---------------
+
+Make sure you are in the project layer of the project(the top menuproject in this case, NOT the lower level one) in the commandline
+
+Write: python3 manage.py shell
+
+Write: from menuapp.models import Menu
+
+Write: p = Menu.objects.get(pk = 2)  #2 refers to the second object we are refferring to
+
+Write: p.cuisine = 'chinese'  #the "cuisine" is the referral key and "chinese" is what we are replacing the value with
+
+Write: p.save()  #to update entry
+
+Write: Menu.objects.all()
