@@ -6,17 +6,17 @@
     <div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
         <h2 class="mb-12 text-2xl text-center">Newest items</h2>
 
-        <div class = "grid grid-cols-2 gap-4">
+        <div class = "grid grid-cols-3 gap-2">
             <!-- shows the newest items on front page -->
             {% for item in items %} 
-                <div>
+                <div class="w-full">
                     <a href="{% url 'item:detail' item.id %}">
                         <div>
                             <img src="{{ item.image.url }}" class="rounded-t-xl">
                         </div>
 
-                        <div class="p-6 bg-white rounded-b-xl">
-                            <h2 class="text-2xl">{{ item.name }}</h2>
+                        <div class="px-3 py-6 bg-white rounded-b-xl">
+                            <h2 class="sm:text-2xl">{{ item.name }}</h2>
                             <p class="text-gray-500">Price: {{ item.price }}</p>
                         </div>
                     </a>
@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="p-6 bg-white rounded-b-xl">
-                            <h2 class="text-2xl">{{ category.name }}</h2>
+                            <h2 class="sm:text-2xl">{{ category.name }}</h2>
                             <p class="text-gray-500">{{ category.items.count }} items</p>
                         </div>
                     </a>
