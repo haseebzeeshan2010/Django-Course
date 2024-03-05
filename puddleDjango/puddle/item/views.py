@@ -4,6 +4,17 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .forms import NewItemForm, EditItemForm
 from .models import Item
 
+def items(request):
+    query = request.GET.get('query','')
+    items = Item.objects.filter(is_sold=False)
+
+    if query:
+        items = items.filter(name__icontains=query)
+    return render(request, 'item/items.html', {
+        'items': items,
+        'query': query,
+    })
+
 # Create your views here.
 def detail(request, pk):
     item = get_object_or_404(Item, pk=pk)
@@ -11,8 +22,9 @@ def detail(request, pk):
 
     return render(request, 'item/detail.html', {
         'item': item,
-        'related_items': related_items
+        'related_items': related_items,
     })
+
 @login_required
 def new(request):
     if request.method == 'POST':
